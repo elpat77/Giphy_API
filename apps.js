@@ -28,16 +28,16 @@ $('button').on("click", function() {
     console.log ('giphyURL'+ giphy_url);
     
     $.ajax({
-        url: giphy_url,
-        method: "GET"
-      })
-.then(function(data) {
-    console.log(data);
-    var results = response.data;
-    console.log(results);
+        method: 'GET',
+        url: giphy_url
+    }).then(response => {
+        const data = response.data;
+        console.log(data);
+        data.forEach(element => {
+            console.log(element.images.fixed_height.url);
 
-    // $('.container').html(data.joke);
-
+            $('.gif_container').append(
+                `<img src="${element.images.fixed_height.url}">`
 
 // $('#searchSubmit').on('click', function () {
 //     const searchText = $('#gifSearch').val();
@@ -49,17 +49,9 @@ $('button').on("click", function() {
 //         '&limit=25&offset=0&rating=G&lang=en';
 //     console.log(queryUrl);
 
-//     $.ajax({
-//         method: 'GET',
-//         url: queryUrl
-//     }).then(response => {
-//         const data = response.data;
-//         console.log(data);
-//         // data.forEach(element => {
-//         //     console.log(element.images.fixed_height.url);
 
-//         //     $('.gifContainer').append(
-//         //         `<img src="${element.images.fixed_height.url}">`
+)
 })
+})        
 })
 })
