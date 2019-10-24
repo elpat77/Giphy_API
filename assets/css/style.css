@@ -3,11 +3,11 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
     background: url('./bg.jpg');
     background-attachment: scroll;  
 
-}
+} */
 
 ul {
     list-style-type: none;

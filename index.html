@@ -2,49 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dog breed Giphy's</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dog breed Giphy's</title>
 </head>
 
 <body>
 
-<div class = "container">
-  <div class="row justify-content-md-center mt-5">
-    <div class="col-md-8 col-sm-12">
+  <div class="container">
+    <div class="row justify-content-md-center mt-5">
+      <div class="col-md-8 col-sm-12">
         <div class="card bg-warning">
-            <h1 class="display-4 text-center mt-3">Giphy's based on dog breeds</h1>
-            <hr class="my-2">
-            <ul class="h5 instructions text-center col-sm-12">
-                <li>Click on any button to display images associated with that breed</li><br>
-                <li>Click on any image to display the gif associated with that image</li><br>
-                <li>Click once more to stop the gif and go back to the image view</li><br>
-            </ul>
-            <hr class="my-2">
-            <h1 class="display-4 text-center mb-3">Have fun!</h1>
+          <h1 class="display-4 text-center mt-3">Giphy's based on dog breeds</h1>
+          <hr class="my-2">
+          <ul class="h5 instructions text-center col-sm-12">
+            <li>Click on any button to display images associated with that breed</li><br>
+            <li>Click on any image to display the gif associated with that image</li><br>
+            <li>Click once more to stop the gif and go back to the image view</li><br>
+          </ul>
+          <hr class="my-2">
+          <h1 class="display-4 text-center mb-3">Have fun!</h1>
         </div>
+      </div>
     </div>
-</div>
 
-<div class="container">
-  <div class="row justify-content-md-center mt-5 mr-4">
-    <div id = "buttons"></div>
-    <div id = "gif"></div>
+    <div class="container">
+      <div class="row justify-content-md-center mt-5 mr-4">
+        <div id="buttons"></div>
+        <div id="gif"></div>
+      </div>
+    </div>
+
+    <form id="breed-form">
+      <div class="row justify-content-md-center mt-5 mr-4">
+        <label for="breed-input">Enter you own breed: </label>
+
+        <input type="text" id="breed-input"><br>
+        <!-- Button triggers new movie to be added -->
+        <input id="add-breed" type="submit" value="Add your own breed!">
+    </form>
+
   </div>
-</div>
 
 </body>
 
 <!-- Added link to the jQuery Library -->
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <!-- added link to bootstrap -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Added a link to our external stylesheet-->
-    <link rel="stylesheet" href="./assets/css/style.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- added link to bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Added a link to our external stylesheet-->
+<link rel="stylesheet" href="./assets/css/style.css">
 <!-- Added a link to our external js-->
 <script src="./assets/javascript/apps.js"></script>
 

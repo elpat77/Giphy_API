@@ -1,9 +1,18 @@
 $(document).ready(function () {
 
-    let topics = ['German Shepherd', 'Labradoodle', 'Corgi', 'Australian Shepherd', 'Saint Bernard', 'Akita'];
+    let topics = ['German Shepherd', 'Labradoodle', 'Australian Shepherd', 'Saint Bernard', 'Akita'];
     // console.log (topics);
 
     //function for displayimng array data, starting empty 
+    $('#add-breed').on('click', event => {
+        event.preventDefault();
+        var userBreed = $('#breed-input').val().trim();
+        console.log(userBreed);
+        topics.push(userBreed);
+        console.log(topics);
+        displayButtons();
+    })
+
     function displayButtons() {
         $('#buttons').empty();
         //looping through the array
@@ -15,9 +24,7 @@ $(document).ready(function () {
             $('#buttons').append(b);
         }
     }
-
     displayButtons();
-
 
     $('button').on("click", function () {
         var dogBreed = $(this).attr("data-breed");
@@ -46,7 +53,7 @@ $(document).ready(function () {
 
                     // Creating and storing an image tag
                     var breedImage = $("<img>");
-                    
+
                     //getting the gif title
                     var title = data[i].title;
                     //adding the titel to a p element
@@ -54,8 +61,8 @@ $(document).ready(function () {
                     //getting the gif ratings
                     var rating = data[i].rating;
                     //adding  the ratings to a p element
-                    var gifRating = $("<p>").text("The MPAA rating is " + rating);                                  
-                    
+                    var gifRating = $("<p>").text("The MPAA rating is " + rating);
+
                     // Setting the src attribute of the image to a property pulled off the result item
                     breedImage.attr("src", data[i].images.original_still.url);
                     breedImage.attr("data-still", data[i].images.original_still.url);
@@ -71,7 +78,10 @@ $(document).ready(function () {
 
                     // Prependng the animalDiv to the HTML page in the "#gif" div
                     $("#gif").prepend(breedDiv);
-                } //adding function that detects user clicks
+                }
+                // This line grabs the input from the textbox
+
+                // adding function that detects user clicks
                 $(".gifStart").on("click", function () {
                     // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
                     var state = $(this).attr("data-state");
@@ -90,8 +100,10 @@ $(document).ready(function () {
                     }
                 });
 
+
             })
     })
+
 })
 
 
