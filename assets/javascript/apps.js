@@ -7,9 +7,9 @@ $(document).ready(function () {
     $('#add-breed').on('click', event => {
         event.preventDefault();
         var userBreed = $('#breed-input').val().trim();
-        console.log(userBreed);
+        console.log('the user breed is ' + userBreed);
         topics.push(userBreed);
-        console.log(topics);
+        console.log('the new topics are ' + topics);
         displayButtons();
     })
 
