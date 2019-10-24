@@ -23,7 +23,6 @@ $(document).ready(function () {
         var dogBreed = $(this).attr("data-breed");
         console.log("dog breed " + dogBreed);
 
-        // let api_key = 'HfGRRO78dm2tvcRZ0xr3g7Z2KNg9cL1L&q';
         const giphy_url = "https://api.giphy.com/v1/gifs/search?api_key=HfGRRO78dm2tvcRZ0xr3g7Z2KNg9cL1L&q=" + dogBreed + "&limit=10&offset=0&rating=R&lang=en";
         console.log('giphyURL ' + giphy_url);
 
