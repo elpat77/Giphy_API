@@ -24,7 +24,7 @@ $(document).ready(function () {
         console.log("dog breed " + dogBreed);
 
         // let api_key = 'HfGRRO78dm2tvcRZ0xr3g7Z2KNg9cL1L&q';
-        const giphy_url = "https://api.giphy.com/v1/gifs/search?api_key=HfGRRO78dm2tvcRZ0xr3g7Z2KNg9cL1L&q=" + dogBreed + "&limit=10&offset=0&rating=PG-13&lang=en";
+        const giphy_url = "https://api.giphy.com/v1/gifs/search?api_key=HfGRRO78dm2tvcRZ0xr3g7Z2KNg9cL1L&q=" + dogBreed + "&limit=10&offset=0&rating=R&lang=en";
         console.log('giphyURL ' + giphy_url);
 
         // Performing an AJAX request with the queryURL
@@ -47,13 +47,27 @@ $(document).ready(function () {
 
                     // Creating and storing an image tag
                     var breedImage = $("<img>");
+                    
+                    //getting the gif title
+                    var title = data[i].title;
+                    //adding the titel to a p element
+                    var gifTitle = $("<p>").text("The title for the following is: " + title);
+                    //getting the gif ratings
+                    var rating = data[i].rating;
+                    //adding  the ratings to a p element
+                    var gifRating = $("<p>").text("The MPAA rating is " + rating);                                  
+                    
                     // Setting the src attribute of the image to a property pulled off the result item
                     breedImage.attr("src", data[i].images.original_still.url);
                     breedImage.attr("data-still", data[i].images.original_still.url);
                     breedImage.attr("data-animate", data[i].images.original.url);
                     breedImage.attr("data-state", "still");
                     breedImage.attr("class", "gifStart");
-                    // Appending thea image tag to the animalDiv
+                    // Appending the rating and image tags to the breedDiv
+                    breedDiv.prepend(gifTitle);
+                    breedDiv.append(gifRating);
+                    breedDiv.append(breedImage);
+
                     breedDiv.append(breedImage);
 
                     // Prependng the animalDiv to the HTML page in the "#gif" div
