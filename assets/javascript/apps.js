@@ -1,18 +1,9 @@
 $(document).ready(function () {
 
     let topics = ['German Shepherd', 'Labradoodle', 'Australian Shepherd', 'Saint Bernard', 'Akita'];
-    // console.log (topics);
+    console.log(topics);
 
-    //function for displayimng array data, starting empty 
-    $('#add-breed').on('click', event => {
-        event.preventDefault();
-        var userBreed = $('#breed-input').val().trim();
-        console.log('the user breed is ' + userBreed);
-        topics.push(userBreed);
-        console.log('the new topics are ' + topics);
-        displayButtons();
-    })
-
+    //function for displaying array data, starting empty 
     function displayButtons() {
         $('#buttons').empty();
         //looping through the array
@@ -26,7 +17,19 @@ $(document).ready(function () {
     }
     displayButtons();
 
-    $('button').on("click", function () {
+    $('#add-breed').on('click', event => {
+        event.preventDefault();
+        var userBreed = $('#breed-input').val();
+        console.log('the user breed is ' + userBreed);
+        topics.push(userBreed);
+        console.log(topics);
+        displayButtons();
+    });
+
+    $(document).on("click", ".breed", displayDogBreed);
+
+    function displayDogBreed() {
+        // $('button').on("click", function () {
         var dogBreed = $(this).attr("data-breed");
         console.log("dog breed " + dogBreed);
 
@@ -99,11 +102,9 @@ $(document).ready(function () {
                         console.log(state)
                     }
                 });
-
-
             })
-    })
-
+    }
 })
+
 
 
