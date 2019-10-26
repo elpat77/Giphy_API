@@ -8,7 +8,7 @@ $(document).ready(function () {
         $('#buttons').empty();
         //looping through the array
         for (let i = 0; i < topics.length; i++) {
-            var b = $("<button>");
+            var b = $("<button class='btn-primary mr-3'>");
             b.addClass("breed");
             b.attr("data-breed", topics[i]);
             b.text(topics[i]);
