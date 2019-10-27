@@ -19,13 +19,32 @@ ul {
     font-family: 'Oswald', sans-serif;
 }
 
-#buttons{
-    font-family: 'PT Sans', sans-serif;
+.title, .rating{
+    font-family: 'Oswald', sans-serif;
+    background: cornflowerblue;
+    text-align: center;
 }
 
-p {
-    font-family: 'Source Sans Pro', sans-serif;
-    text-align: center;
-    line-height: 20px;   /* within paragraph */
-    margin-bottom: 25px; /*between paragraphs */
+.title {
+    margin-bottom: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rating {
+    margin-bottom: 40px;
+}
+
+.gifStart{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* #gif{
+    width: 100%;
+} */
+
+#buttons{
+    font-family: 'PT Sans', sans-serif;
 }

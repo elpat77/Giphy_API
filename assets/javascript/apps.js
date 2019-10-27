@@ -54,29 +54,33 @@ $(document).ready(function () {
                     // Creating and storing a div tag
                     var breedDiv = $("<div>");
 
-                    // Creating and storing an image tag
-                    var breedImage = $("<img>");
-
                     //getting the gif title
                     var title = data[i].title;
-                    //adding the titel to a p element
-                    var gifTitle = $("<p>").text("This gif is called: " + title);
+                    //adding the title to a p element and assigning it to a class
+                    var gifTitle = $("<p> class='justify-content-md-center mt-5'>").text("This gif is called: " + title);
+                    gifTitle.addClass("title");
                     //getting the gif ratings
                     var rating = data[i].rating;
-                    //adding  the ratings to a p element
-                    var gifRating = $("<p>").text("The MPAA rating is " + rating);
-
+                    //adding  the ratings to a p element and assigning it to a class
+                    var gifRating = $("<p> class='justify-content-md-center mt-5'>").text("The MPAA rating is " + rating);
+                    gifRating.addClass("rating");
                     // Setting the src attribute of the image to a property pulled off the result item
+
+                    // Creating and storing an image tag
+                    var breedImage = $("<img>");
                     breedImage.attr("src", data[i].images.original_still.url);
                     breedImage.attr("data-still", data[i].images.original_still.url);
                     breedImage.attr("data-animate", data[i].images.original.url);
                     breedImage.attr("data-state", "still");
                     breedImage.attr("class", "gifStart");
+
+
                     // Appending the rating and image tags to the breedDiv
 
-                    breedDiv.prepend(gifTitle);
-                    breedDiv.append(breedImage);
+                    breedDiv.append(gifTitle);
                     breedDiv.append(gifRating);
+                    breedDiv.prepend(breedImage);
+
 
                     // Prependng the animalDiv to the HTML page in the "#gif" div
                     $("#gif").prepend(breedDiv);
