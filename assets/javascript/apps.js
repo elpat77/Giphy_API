@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let topics = ['German Shepherd', 'Labradoodle', 'Australian Shepherd', 'Saint Bernard', 'Akita'];
+    let topics = ['German Shepherd', 'Labradoodle', 'Golden Retriever', 'Saint Bernard'];
     console.log(topics);
 
     //function for displaying array data, starting empty 
@@ -60,7 +60,7 @@ $(document).ready(function () {
                     //getting the gif title
                     var title = data[i].title;
                     //adding the titel to a p element
-                    var gifTitle = $("<p>").text("The title for the following is: " + title);
+                    var gifTitle = $("<p>").text("This gif is called: " + title);
                     //getting the gif ratings
                     var rating = data[i].rating;
                     //adding  the ratings to a p element
@@ -73,11 +73,10 @@ $(document).ready(function () {
                     breedImage.attr("data-state", "still");
                     breedImage.attr("class", "gifStart");
                     // Appending the rating and image tags to the breedDiv
-                    breedDiv.prepend(gifTitle);
-                    breedDiv.append(gifRating);
-                    breedDiv.append(breedImage);
 
+                    breedDiv.prepend(gifTitle);
                     breedDiv.append(breedImage);
+                    breedDiv.append(gifRating);
 
                     // Prependng the animalDiv to the HTML page in the "#gif" div
                     $("#gif").prepend(breedDiv);
