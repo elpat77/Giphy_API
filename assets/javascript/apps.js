@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let topics = ['German Shepherd', 'Labradoodle', 'Golden Retriever', 'Saint Bernard'];
+    let topics = ['German Shepherd', 'Labradoodle', 'Golden Retriever', 'Saint Bernard', 'Rottweiler'];
     console.log(topics);
 
     //function for displaying array data, starting empty 
@@ -8,7 +8,7 @@ $(document).ready(function () {
         $('#buttons').empty();
         //looping through the array
         for (let i = 0; i < topics.length; i++) {
-            var b = $("<button class='btn-primary mr-3'>");
+            var b = $("<button class='btn-primary mb-3 mr-4'>");
             b.addClass("breed");
             b.attr("data-breed", topics[i]);
             b.text(topics[i]);
