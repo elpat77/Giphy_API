@@ -2,10 +2,11 @@
 
 ### Overview
 
-The goal of this assignment was to use the GIPHY API to make a dynamic web page that populates with gifs. The website calls the GIPHY API and uses JavaScript and jQuery to make HTML changes. The styling is made with Bootstrap and CSS.
+### The goal of this assignment was to use the GIPHY API to make a dynamic web page that populates with gifs. The website calls the GIPHY API and uses JavaScript and jQuery to make HTML changes. We are jusing Ajax in order o make calls to the giphy API.The styling is made with Bootstrap and CSS.
 
 
 ### Things to Note
+**[Click here to watch the demo video](https://youtu.be/BqreERTLjgQ)**
 
 1. There are a few sample buttons displayed on the page. In this case the buttons are related to "Dog Breeds"
 
